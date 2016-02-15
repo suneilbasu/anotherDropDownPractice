@@ -1,7 +1,7 @@
 <h1>Students#index</h1>
 <%= params.inspect %>
 <%= form_tag students_path, :method => 'get' do %>
-  <%= text_field_tag :search, params[:search] %>
+  <%= text_field_tag :bob, params[:bob] %>
   <%= collection_select(:student, :tutor_id, Tutor.all, :id, :name, prompt: true) %>
   <%= submit_tag "Search" %>
 <% end %>
