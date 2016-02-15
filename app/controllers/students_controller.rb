@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.all
+    @students = Student.where(["tutor_id LIKE ?","%#{params[:student][:tutor_id]}%"])
   end
 
   def new
