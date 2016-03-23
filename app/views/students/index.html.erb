@@ -4,7 +4,9 @@
   <%= text_field_tag :bob, params[:bob] %>
   <%= collection_select(:student, :tutor_id, Tutor.all, :id, :name, prompt: true) %>
   <%= submit_tag "Search" %>
+
 <% end %>
+
 <% @students.each do |n| %>
 <li> <%= n.fname %> <%= n.sname %> <%= n.tutor.name %> </li>
 <% end %>
